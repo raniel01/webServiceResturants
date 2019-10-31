@@ -1,13 +1,12 @@
-  
 <?php
 include('conn.php');
-$menu = $_POST['menu'];
-$restaurants = $_POST['restaurants'];
-$localization = $_POST['localization'];
-$categories = $_POST['categories'];
+$menu = $_GET['menu'];
+$restaurants = $_GET['restaurants'];
+$localization = $_GET['localization'];
+$categories = $_GET['categories'];
 
-if($email != ""){
-    $query = "insert into tb_usuario values (null, '$menu', '$restaurants', '$localization',' $categories')";
+if($restaurants!= ""){
+    $query = "insert into tb_restaurants values (null, '$menu', '$restaurants', '$localization',' $categories')";
     mysqli_query($conecta, $query);
     echo "Cadastrado com sucesso!";
 }else{
