@@ -1,10 +1,11 @@
 <?php
 include('conn.php');
-$items = $_GET['items'];
-$prices = $_GET['prices'];
+$restaurants = $_POST['restaurants']
+$items = $_POST['items'];
+$prices = $_POST['prices'];
 
 if($items!= ""){
-    $query = "insert into tb_menu values (null, '$items', '$prices')";
+    $query = "insert into tb_menu values (null, '$restaurants','$items', '$prices')";
     mysqli_query($conecta, $query);
     echo "Cadastrado com sucesso!";
 }else{
