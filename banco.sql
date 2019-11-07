@@ -3,6 +3,8 @@ CREATE TABLE `tb_restaurants` (
   `restaurants` varchar(70) COLLATE utf8_unicode_ci NOT NULL,
   `localization` varchar(70) COLLATE utf8_unicode_ci DEFAULT NULL,
   `categories` int(11) NOT NULL,
+  `login` varchar(20) NOT NUll,
+  `password` int(50) NOT NUll
   PRIMARY KEY (`code`)
 );
 
